@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Палитра | Гайдлайн</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .color-item {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .color-item img {
+            object-fit: cover;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .color-item img {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-menu">
+        <a href="index.html">Главная</a>
+        <a href="logo.html">Логотипы</a>
+        <a href="palette.html">Палитра</a>
+        <a href="fonts.html">Шрифты</a>
+        <a href="elements.html">Фирменный стиль</a>
+        <a href="mascot.html">Маскоты</a>
+        <a href="media.html">Носители</a>
+        <a href="social.html">Соцсети</a>
+    </div>
+
+    <a href="index.html" class="back">← На главную</a>
+    <h1>Цветовая палитра</h1>
+    
+    <!-- Текстовый блок на 6 колонок (а не на 12) -->
+    <div class="grid-12">
+        <div class="text-block-6">
+            <p>Выбранные цвета (голубой, зелёный, фиолетовый, бежево-жёлтый) соответствуют классическим ассоциациям, используемым в типологии MBTI, однако были сознательно смягчены до пастельных оттенков. Это создаёт более спокойную, уютную и психологически комфортную атмосферу.</p>
+        </div>
+    </div>
+    
+    <!-- Цвета -->
+    <div class="grid-12">
+        <div style="grid-column: span 4;">
+            <div class="vertical-colors">
+                <div class="color-item"><img src="palette/white.png" alt="белый"></div>
+                <div class="color-item"><img src="palette/black.png" alt="черный"></div>
+            </div>
+        </div>
+        <div style="grid-column: span 8;">
+            <div class="color-row">
+                <div class="color-item"><img src="palette/green.png" alt="зеленый"></div>
+                <div class="color-item"><img src="palette/purple.png" alt="фиолетовый"></div>
+                <div class="color-item"><img src="palette/yellow.png" alt="желтый"></div>
+                <div class="color-item"><img src="palette/blue.png" alt="голубой"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-social">
+        <a href="https://vk.com/tunubkyc">ВКонтакте</a>
+    </div>
+</div>
+</body>
+</html>

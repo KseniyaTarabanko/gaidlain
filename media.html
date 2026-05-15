@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Носители | Гайдлайн</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Якорное меню – фиксированное (sticky) с нужным внешним видом */
+        .carrier-anchor-menu {
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 20px 0 40px;
+            padding: 15px 20px;
+            background: white;
+            border: 2px solid #000;
+            border-radius: 50px;
+        }
+        .carrier-anchor-menu a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            transition: 0.2s;
+            padding: 5px 15px;
+            border-radius: 30px;
+        }
+        .carrier-anchor-menu a:hover {
+            color: #F2C94C;
+            background: #f9f6ef;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-menu">
+        <a href="index.html">Главная</a>
+        <a href="logo.html">Логотипы</a>
+        <a href="palette.html">Палитра</a>
+        <a href="fonts.html">Шрифты</a>
+        <a href="elements.html">Фирменный стиль</a>
+        <a href="mascot.html">Маскоты</a>
+        <a href="media.html">Носители</a>
+        <a href="social.html">Соцсети</a>
+    </div>
+
+    <a href="index.html" class="back">← На главную</a>
+    <h1>Фирменные носители</h1>
+    
+    <!-- Якорное меню (фиксируется при прокрутке) -->
+    <div class="carrier-anchor-menu">
+        <a href="#notebook1">Блокнот 1</a>
+        <a href="#notebook2">Блокнот 2</a>
+        <a href="#viveska">Вывеска</a>
+        <a href="#afisha">Афиша</a>
+        <a href="#otkrytki">Открытка</a>
+        <a href="#stakan">Стакан</a>
+        <a href="#upakovka">Упаковка</a>
+        <a href="#paket">Пакет</a>
+        <a href="#stikery">Стикеры</a>
+        <a href="#znachki">Значки</a>
+        <a href="#shoper">Шоперы</a>
+        <a href="#vizitka">Визитки</a>
+        <a href="#menu">Меню</a>
+        <a href="#beidzh">Бейджи</a>
+        <a href="#test">Быстрый тест</a>
+    </div>
+
+    <!-- Блокнот 1 -->
+    <div id="notebook1" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text">
+                <div class="carrier-title">Блокнот 1</div>
+                <div class="carrier-desc">Формат А5 (148×210 мм). Фирменный блокнот с тестовыми страницами MBTI, персонажами 16 типов. Идеален для заметок и самопознания.</div>
+            </div>
+            <div class="carrier-image">
+                <img class="default-img" src="media/notebook_mockup.png" alt="Блокнот 1">
+                <img class="hover-img" src="media/notebook.png" alt="Макет блокнота 1">
+            </div>
+        </div>
+    </div>
+
+    <!-- Блокнот 2 -->
+    <div id="notebook2" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text">
+                <div class="carrier-title">Блокнот 2</div>
+                <div class="carrier-desc">Карманный формат А6 (105×148 мм). Удобный блокнот с краткими описаниями типов и местом для личных заметок.</div>
+            </div>
+            <div class="carrier-image">
+                <img class="default-img" src="media/notebook2_mockup.png" alt="Блокнот 2">
+                <img class="hover-img" src="media/notebook2.png" alt="Макет блокнота 2">
+            </div>
+        </div>
+    </div>
+
+    <!-- Вывеска -->
+    <div id="viveska" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text"><div class="carrier-title">Вывеска</div><div class="carrier-desc">Круглая вывеска ⌀500 мм. Световая конструкция с логотипом и 16 иконками типов по окружности.</div></div>
+            <div class="carrier-image"><img class="default-img" src="media/signboard_mockup.png" alt="Вывеска"><img class="hover-img" src="media/signboard.png" alt="Макет вывески"></div>
+        </div>
+    </div>
+    
+    <!-- Афиша -->
+    <div id="afisha" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text"><div class="carrier-title">Афиша</div><div class="carrier-desc">1200×1800 мм. Вертикальный плакат с заголовком, QR-кодом и описанием концепции.</div></div>
+            <div class="carrier-image"><img class="default-img" src="media/poster_mockup.png" alt="Афиша"><img class="hover-img" src="media/poster.png" alt="Макет афиши"></div>
+        </div>
+    </div>
+    
+    <!-- Открытка -->
+    <div id="otkrytki" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text"><div class="carrier-title">Открытка</div><div class="carrier-desc">Набор из 16 открыток А6 (148×105 мм). Портрет маскота, название типа, рекомендованный напиток.</div></div>
+            <div class="carrier-image"><img class="default-img" src="media/postcard_mockup.png" alt="Открытки"><img class="hover-img" src="media/postcard.png" alt="Макет открыток"></div>
+        </div>
+    </div>
+    
+    <!-- Стакан -->
+    <div id="stakan" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text"><div class="carrier-title">Стакан</div><div class="carrier-desc">300 мл, 80×95 мм. Крафт-бумага, пояс из зелёного цвета с логотипом, шкала I/E.</div></div>
+            <div class="carrier-image"><img class="default-img" src="media/cap_mockup.png" alt="Стакан"><img class="hover-img" src="media/cap.png" alt="Макет стакана"></div>
+        </div>
+    </div>
+    
+    <!-- Упаковка для выпечки -->
+    <div id="upakovka" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text"><div class="carrier-title">Упаковка для выпечки</div><div class="carrier-desc">200×150×100 мм. Бежевый картон, надпись «Вкус твоего типа», паттерн из иконок.</div></div>
+            <div class="carrier-image"><img class="default-img" src="media/box_mockup.png" alt="Упаковка"><img class="hover-img" src="media/box.png" alt="Макет упаковки"></div>
+        </div>
+    </div>
+    
+    <!-- Бумажный пакет -->
+    <div id="paket" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text"><div class="carrier-title">Бумажный пакет</div><div class="carrier-desc">240×320×70 мм. Крафт-бумага, логотип и слоган «Личность видна в мелочах».</div></div>
+            <div class="carrier-image"><img class="default-img" src="media/peperbag_mockup.png" alt="Пакет"><img class="hover-img" src="media/peperbag.png" alt="Макет пакета"></div>
+        </div>
+    </div>
+    
+    <!-- Стикеры -->
+    <div id="stikery" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text"><div class="carrier-title">Стикеры</div><div class="carrier-desc">50×50 мм, винил. Набор из 20 стикеров: 16 персонажей + 4 тематических.</div></div>
+            <div class="carrier-image"><img class="default-img" src="media/sticker_mockup.png" alt="Стикеры"><img class="hover-img" src="media/sticker.png" alt="Макет стикеров"></div>
+        </div>
+    </div>
+    
+    <!-- Значки -->
+    <div id="znachki" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text"><div class="carrier-title">Значки</div><div class="carrier-desc">Диаметр 56 мм, металл, эмаль. Коллекция из 16 типов.</div></div>
+            <div class="carrier-image"><img class="default-img" src="media/icons_mockup.png" alt="Значки"><img class="hover-img" src="media/icons.png" alt="Макет значков"></div>
+        </div>
+    </div>
+    
+    <!-- Шоперы -->
+    <div id="shoper" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text"><div class="carrier-title">Шоперы</div><div class="carrier-desc">400×400 мм, натуральный хлопок. Логотип и девиз «16 граней твоей личности».</div></div>
+            <div class="carrier-image"><img class="default-img" src="media/bag_mockup.png" alt="Шопер"><img class="hover-img" src="media/bag.png" alt="Макет шопера"></div>
+        </div>
+    </div>
+    
+    <!-- Визитки -->
+    <div id="vizitka" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text"><div class="carrier-title">Визитки</div><div class="carrier-desc">90×50 мм, пластик/картон. Логотип, имя, должность или контакты.</div></div>
+            <div class="carrier-image"><img class="default-img" src="media/map_mockup.png" alt="Визитки"><img class="hover-img" src="media/map.png" alt="Макет визитки"></div>
+        </div>
+    </div>
+    
+    <!-- Меню -->
+    <div id="menu" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text"><div class="carrier-title">Меню</div><div class="carrier-desc">А4, двустороннее. Таблица напитков по 16 типам, сезонные предложения.</div></div>
+            <div class="carrier-image"><img class="default-img" src="media/menu_mockup.png" alt="Меню"><img class="hover-img" src="media/menu.png" alt="Макет меню"></div>
+        </div>
+    </div>
+    
+    <!-- Бейджи -->
+    <div id="beidzh" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text"><div class="carrier-title">Бейджи сотрудников</div><div class="carrier-desc">90×60 мм, пластик. Логотип, имя сотрудника, подстрочник «Тип&Вкус».</div></div>
+            <div class="carrier-image"><img class="default-img" src="media/badge_mockup.png" alt="Бейдж"><img class="hover-img" src="media/badge.png" alt="Макет бейджа"></div>
+        </div>
+    </div>
+    
+    <!-- Быстрый тест -->
+    <div id="test" class="carrier-block">
+        <div class="carrier-grid">
+            <div class="carrier-text"><div class="carrier-title">Быстрый тест MBTI</div><div class="carrier-desc">А4, раздаточный материал. 4 вопроса с вариантами ответов, в конце – код типа и рекомендация напитка.</div></div>
+            <div class="carrier-image"><img class="default-img" src="media/test_mockup.png" alt="Тест"><img class="hover-img" src="media/test.png" alt="Макет теста"></div>
+        </div>
+    </div>
+    
+    <div class="footer-social">
+        <a href="https://vk.com/tunubkyc">ВКонтакте</a>
+    </div>
+</div>
+<script>
+    const modal = document.createElement('div'); modal.className = 'modal';
+    const modalImg = document.createElement('img'); modalImg.className = 'modal-content';
+    const closeBtn = document.createElement('span'); closeBtn.className = 'close'; closeBtn.innerHTML = '&times;';
+    modal.appendChild(closeBtn); modal.appendChild(modalImg); document.body.appendChild(modal);
+    modal.onclick = () => modal.style.display = 'none';
+    document.querySelectorAll('.carrier-image img').forEach(img => {
+        img.addEventListener('click', function(e) { e.stopPropagation(); modal.style.display = 'block'; modalImg.src = this.src; });
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.style.display = 'none'; });
+</script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+/* styles.css – единые стили для всех страниц гайдлайна */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    font-family: 'Century Gothic', 'CenturyGothic', 'Apple Gothic', sans-serif;
+    color: #000000; /* Черный цвет для всего основного текста */
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 160px;
+}
+
+/* заголовки */
+h1, h2, .title-font {
+    font-family: 'Century Gothic', cursive;
+    font-weight: normal;
+    color: #000000; /* Черный цвет для заголовков */
+}
+h1 {
+    font-size: 48px;
+    margin: 80px 0 32px;
+}
+h2 {
+    font-size: 32px;
+    margin: 40px 0 24px;
+}
+
+/* меню навигации (только на внутренних страницах) */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0 40px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #000;
+    padding-bottom: 20px;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: 0.2s;
+    font-size: 18px;
+}
+.nav-menu a:hover {
+    color: #F2C94C;
+}
+
+/* фиксированное якорное меню для носителей */
+.carrier-anchor-menu {
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0 40px;
+    padding: 15px 20px;
+    background: white;
+    border: 2px solid #000;
+    border-radius: 50px;
+}
+.carrier-anchor-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: 0.2s;
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+.carrier-anchor-menu a:hover {
+    color: #F2C94C;
+    background: #f9f6ef;
+}
+
+/* кнопка назад */
+.back {
+    display: inline-block;
+    margin: 20px 0 0;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    padding: 6px 12px;
+    transition: 0.2s;
+    border: 2px solid #000;
+    border-radius: 30px;
+}
+.back:hover {
+    color: #F2C94C;
+    border-color: #F2C94C;
+}
+
+/* пагинация внизу */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 80px 0 60px;
+    padding-top: 40px;
+    border-top: 2px solid #000;
+}
+.page-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: 0.2s;
+    border: 2px solid #000;
+    border-radius: 30px;
+}
+.page-nav a:hover {
+    color: #F2C94C;
+    border-color: #F2C94C;
+}
+.page-nav span {
+    color: #aaa;
+}
+
+/* сетки */
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+    margin: 40px 0;
+}
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/* общие стили для изображений – рамка и скругление (по умолчанию) */
+img {
+    width: 100%;
+    display: block;
+    border: 2px solid #000;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+img:hover {
+    opacity: 0.9;
+}
+
+/* специальный класс для картинок без рамки */
+img.no-frame {
+    border: none;
+    border-radius: 0;
+}
+img.no-frame:hover {
+    opacity: 1;
+}
+
+/* карточки категорий на главной */
+.category-card {
+    padding: 40px 20px;
+    background: none;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid #000;
+    border-radius: 30px;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 120px;
+}
+.category-card:hover {
+    background-color: #f9f6ef;
+    transform: translateY(-5px);
+}
+.category-card h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+/* текстовые блоки без фона, черный текст */
+.text-block-6 {
+    grid-column: span 6;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.5;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #000000;
+}
+.full-width-text {
+    grid-column: span 12;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #000000;
+}
+
+/* баннер */
+.banner-block {
+    margin: 40px 0;
+}
+.banner-img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* карточки для текста (без обводки и фона) */
+.text-card {
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+/* вертикальные цвета */
+.vertical-colors {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.color-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+/* маскоты – выравнивание названий по высоте */
+.mascot-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.mascot-item p {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+/* носители (с рамкой и эффектом наведения) */
+.carrier-block {
+    border: 2px solid #000;
+    border-radius: 30px;
+    margin-bottom: 60px;
+    overflow: hidden;
+    scroll-margin-top: 120px;
+}
+.carrier-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0;
+}
+.carrier-text {
+    grid-column: span 4;
+    padding: 40px 20px 40px 40px;
+}
+.carrier-text p, .carrier-text .carrier-desc {
+    border: none;
+    background: none;
+    color: #000000;
+}
+.carrier-image {
+    grid-column: span 8;
+    position: relative;
+    min-height: 350px;
+    background: #f9f6ef;
+}
+.carrier-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+    transition: opacity 0.2s;
+}
+.carrier-image .default-img {
+    opacity: 1;
+}
+.carrier-image .hover-img {
+    opacity: 0;
+}
+.carrier-image:hover .default-img {
+    opacity: 0;
+}
+.carrier-image:hover .hover-img {
+    opacity: 1;
+}
+.carrier-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+.carrier-desc {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* подвал – только VK */
+.footer-social {
+    margin-top: 80px;
+    padding: 40px 0;
+    border-top: 2px solid #000;
+    text-align: center;
+}
+.footer-social a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    transition: 0.2s;
+    border: 2px solid #000;
+    border-radius: 30px;
+    padding: 8px 32px;
+    display: inline-block;
+}
+.footer-social a:hover {
+    color: #F2C94C;
+    border-color: #F2C94C;
+}
+
+/* модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    cursor: pointer;
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 0;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover { color: #F2C94C; }
+
+/* адаптивность */
+@media (max-width: 1200px) {
+    .container { padding: 0 60px; }
+}
+@media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .grid-12, .grid-3, .grid-4, .grid-2, .color-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .text-block-6, .full-width-text {
+        grid-column: span 1;
+    }
+    .vertical-colors {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    .carrier-grid {
+        grid-template-columns: 1fr;
+    }
+    .carrier-text, .carrier-image {
+        grid-column: span 1;
+        padding: 24px;
+    }
+    .carrier-image {
+        min-height: 250px;
+    }
+    .carrier-anchor-menu {
+        position: relative;
+        top: 0;
+    }
+}

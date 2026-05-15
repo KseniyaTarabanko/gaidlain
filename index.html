@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бренд-гайдлайн | Тип & Вкус</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили только для главной страницы: полноширинный баннер с обрезкой по высоте */
+        .full-width-banner {
+            position: relative;
+            width: 100%;
+            height: 400px;          /* фиксированная высота, обрезаем изображение */
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .full-width-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;      /* обрезает картинку, сохраняя пропорции */
+            display: block;
+            border: none;
+            border-radius: 0;
+        }
+        .banner-title {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            transform: none;        /* отменяем центрирование */
+            text-align: left;
+            z-index: 2;
+        }
+        .banner-title h1 {
+            font-size: 48px;
+            margin: 0;
+            color: white;
+            background: rgba(0, 0, 0, 0.5); /* полупрозрачная подложка для читаемости */
+            padding: 10px 24px;
+            border-radius: 40px;
+            display: inline-block;
+            font-family: 'Fredoka One', cursive;
+            font-weight: normal;
+            text-shadow: none;
+            letter-spacing: 1px;
+        }
+        /* Убираем стандартный h1 в контейнере */
+        .container .main-title {
+            display: none;
+        }
+        /* Категории: одинаковый размер и фирменные цвета */
+        .category-card {
+            background-color: #f9f6ef;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 140px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        /* Присваиваем разные фоновые цвета */
+        .category-card:nth-child(1) { background-color: #B8D4E3; }
+        .category-card:nth-child(2) { background-color: #C2D6B3; }
+        .category-card:nth-child(3) { background-color: #D4C4E8; }
+        .category-card:nth-child(4) { background-color: #F5E6C4; }
+        .category-card:nth-child(5) { background-color: #B8D4E3; }
+        .category-card:nth-child(6) { background-color: #C2D6B3; }
+        .category-card:nth-child(7) { background-color: #D4C4E8; }
+        /* Текст внутри карточек – чёрный */
+        .category-card h2 {
+            color: #2E3B2A;
+            font-size: 28px;
+            margin: 0;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 0;
+        }
+        /* адаптив для мобильных */
+        @media (max-width: 768px) {
+            .full-width-banner {
+                height: 250px;
+            }
+            .banner-title h1 {
+                font-size: 32px;
+                padding: 6px 16px;
+            }
+            .banner-title {
+                top: 15px;
+                left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Полноширинный баннер с обрезкой по высоте, заголовок в левом углу -->
+    <div class="full-width-banner">
+        <img src="media/poster_mockup.png" alt="Баннер гайдлайна">
+        <div class="banner-title">
+            <h1>Гайдлайн<br>Тип & Вкус</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- ДВА ТЕКСТОВЫХ БЛОКА ПО 6 КОЛОНОК -->
+        <div class="grid-12">
+            <div class="text-block-6">
+                <p><strong>О гайдлайне</strong><br>Гайдлайн содержит полное описание визуального языка бренда «Тип&Вкус»: логотипы, цветовую палитру, шрифты, маскоты 16 типов личности, графические элементы, а также примеры использования на фирменных носителях и в социальных сетях.</p>
+            </div>
+            <div class="text-block-6">
+                <p><strong>Что такое MBTI?</strong><br>MBTI (Myers-Briggs Type Indicator) – метод психологической оценки, который определяет один из 16 типов личности. Кафе «Тип&Вкус» объединяет психологию и гастрономию: каждый тип личности получает свой уникальный напиток, а гости могут лучше узнать себя через вкус.</p>
+            </div>
+        </div>
+
+        <!-- КАТЕГОРИИ (одинакового размера, в фирменных цветах) -->
+        <div class="grid-12">
+            <a href="logo.html" class="category-card" style="grid-column: span 4;"><h2>Логотипы</h2></a>
+            <a href="palette.html" class="category-card" style="grid-column: span 4;"><h2>Палитра</h2></a>
+            <a href="fonts.html" class="category-card" style="grid-column: span 4;"><h2>Шрифты</h2></a>
+            <a href="mascot.html" class="category-card" style="grid-column: span 4;"><h2>Маскоты</h2></a>
+            <a href="elements.html" class="category-card" style="grid-column: span 4;"><h2>Элементы фирменного стиля</h2></a>
+            <a href="media.html" class="category-card" style="grid-column: span 4;"><h2>Носители</h2></a>
+            <a href="social.html" class="category-card" style="grid-column: span 4;"><h2>Соцсети</h2></a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://vk.com/tunubkyc">ВКонтакте</a>
+        </div>
+    </div>
+</body>
+</html>

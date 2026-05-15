@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Соцсети | Гайдлайн</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 40px 0;
+        }
+        .post-example, .story-example, .product-card {
+            border: none;
+            background: none;
+            border-radius: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .post-example img, .story-example img, .product-card img {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            margin: 0 auto 16px;
+            border-radius: 20px;
+            display: block;
+        }
+        .product-card {
+            background: none;
+        }
+        @media (max-width: 768px) {
+            .example-grid { grid-template-columns: 1fr; }
+            .post-example img, .story-example img, .product-card img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-menu">
+        <a href="index.html">Главная</a>
+        <a href="logo.html">Логотипы</a>
+        <a href="palette.html">Палитра</a>
+        <a href="fonts.html">Шрифты</a>
+        <a href="elements.html">Фирменный стиль</a>
+        <a href="mascot.html">Маскоты</a>
+        <a href="media.html">Носители</a>
+        <a href="social.html">Соцсети</a>
+    </div>
+
+    <a href="index.html" class="back">← На главную</a>
+    <h1>Оформление социальных сетей</h1>
+
+    <h2>Примеры постов (3 из разных серий)</h2>
+    <div class="example-grid">
+        <div class="post-example" id="post1">
+            <img src="social/post6.png" alt="Пост-знакомство">
+            <p><strong>Знакомство с кафе</strong><br>Рассказ о концепции и MBTI.</p>
+        </div>
+        <div class="post-example" id="post2">
+            <img src="social/post1.png" alt="Пост о типе">
+            <p><strong>Пост о типе личности</strong><br>INFP – Идеалист, черты и напиток.</p>
+        </div>
+        <div class="post-example" id="post3">
+            <img src="social/post10.png" alt="Пост о напитке">
+            <p><strong>Пост о напитке</strong><br>Айс-латте с солёным арахисом для ISTP.</p>
+        </div>
+    </div>
+
+    <h2>Примеры сторис (2 из разных серий)</h2>
+    <div class="example-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="story-example" id="story1">
+            <img src="social/story1.png" alt="Сторис-опрос">
+            <p><strong>Сторис-анонс</strong><br>Анонсы лекций</p>
+        </div>
+        <div class="story-example" id="story2">
+            <img src="social/story4.png" alt="Сторис о типе">
+            <p><strong>Сторис о типе</strong><br>Что подходит тебе?</p>
+        </div>
+    </div>
+
+    <h2>Карточки товаров (квадратные)</h2>
+    <div class="example-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="product-card" id="product1">
+            <img src="social/produc1.png" alt="Напиток INTJ">
+            <p><strong>Напиток</strong><br>Наведи на товар</p>
+        </div>
+        <div class="product-card" id="product2">
+            <img src="social/produc17.png" alt="Напиток ENFP">
+            <p><strong>Перекус</strong><br>Наведи на товар</p>
+        </div>
+    </div>
+
+    <div class="footer-social">
+        <a href="https://vk.com/tunubkyc">ВКонтакте</a>
+    </div>
+</div>
+
+<script>
+    // функция для циклической смены изображений (остановка на последнем показанном)
+    function setupImageCycler(elementId, imageBaseName, startIndex, endIndex, initialIndex, imageFolder = "social/") {
+        const container = document.getElementById(elementId);
+        if (!container) return;
+        const imgElement = container.querySelector('img');
+        if (!imgElement) return;
+        
+        let interval = null;
+        let currentCycleIndex = initialIndex; // текущий индекс (последняя показанная картинка)
+        
+        function getImagePath(index) {
+            return imageFolder + imageBaseName + index + ".png";
+        }
+        
+        function startCycling() {
+            if (interval) clearInterval(interval);
+            interval = setInterval(() => {
+                // переходим к следующему индексу, циклически в пределах startIndex..endIndex
+                if (currentCycleIndex < endIndex) {
+                    currentCycleIndex++;
+                } else {
+                    currentCycleIndex = startIndex;
+                }
+                imgElement.src = getImagePath(currentCycleIndex);
+            }, 600);
+        }
+        
+        function stopCycling() {
+            if (interval) {
+                clearInterval(interval);
+                interval = null;
+            }
+            // ничего не делаем с картинкой – оставляем последнюю показанную
+        }
+        
+        // установим начальное изображение
+        imgElement.src = getImagePath(initialIndex);
+        
+        container.addEventListener("mouseenter", startCycling);
+        container.addEventListener("mouseleave", stopCycling);
+    }
+    
+    // посты
+    setupImageCycler("post1", "post", 6, 9, 6);
+    setupImageCycler("post2", "post", 1, 5, 1);
+    setupImageCycler("post3", "post", 10, 13, 10);
+    
+    // сторис
+    setupImageCycler("story1", "story", 1, 3, 1);
+    setupImageCycler("story2", "story", 4, 7, 4);
+    
+    // товары: первый – produc1..produc16, начальный produc1
+    // второй – produc17..produc32, начальный produc17
+    setupImageCycler("product1", "produc", 1, 16, 1);
+    setupImageCycler("product2", "produc", 17, 32, 17);
+    
+    // модальное окно
+    const modal = document.createElement('div'); modal.className = 'modal';
+    const modalImg = document.createElement('img'); modalImg.className = 'modal-content';
+    const closeBtn = document.createElement('span'); closeBtn.className = 'close'; closeBtn.innerHTML = '&times;';
+    modal.appendChild(closeBtn); modal.appendChild(modalImg); document.body.appendChild(modal);
+    modal.onclick = () => modal.style.display = 'none';
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('click', function(e) { e.stopPropagation(); modal.style.display = 'block'; modalImg.src = this.src; });
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.style.display = 'none'; });
+</script>
+</body>
+</html>

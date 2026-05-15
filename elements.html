@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Элементы фирменного стиля | Гайдлайн</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .overlay-block {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .bg-img, .pattern-img {
+            border: none;
+            border-radius: 0;
+        }
+        .pattern-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+            height: auto;
+            object-fit: contain;
+            pointer-events: none;
+        }
+        .color-hover {
+            transition: 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .cycler-img {
+            display: block;
+            width: 100%;
+        }
+        /* статичная картинка MBTI поверх цветного блока – без обводки и увеличенная */
+        .mbti-overlay {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100;          /* увеличен размер */
+            height: auto;
+            pointer-events: none;
+            z-index: 5;
+            border: none !important;  /* убираем обводку */
+            border-radius: 0 !important;
+        }
+        .photostyle-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 40px 0;
+        }
+        .photo-item {
+            text-align: center;
+        }
+        .photo-item img, .text-block-card {
+            width: 100%;
+            border: 2px solid #000;
+            border-radius: 30px;
+        }
+        .text-block-card {
+            background: none;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100%;
+            min-height: 200px;
+        }
+        @media (max-width: 768px) {
+            .photostyle-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-menu">
+        <a href="index.html">Главная</a>
+        <a href="logo.html">Логотипы</a>
+        <a href="palette.html">Палитра</a>
+        <a href="fonts.html">Шрифты</a>
+        <a href="elements.html">Фирменный стиль</a>
+        <a href="mascot.html">Маскоты</a>
+        <a href="media.html">Носители</a>
+        <a href="social.html">Соцсети</a>
+    </div>
+
+    <a href="index.html" class="back">← На главную</a>
+    <h1>Элементы фирменного стиля</h1>
+    
+    <h2>Графические элементы</h2>
+    <div class="grid-2">
+        <!-- Голубой блок с циклической сменой цвета + статичная картинка MBTI -->
+        <div class="color-hover" id="colorCycler" style="position: relative;">
+            <img class="cycler-img" id="cyclerImg" src="elements/blueelement.png" alt="Цветовой элемент">
+            <!-- Статичная картинка MBTI поверх (без обводки, увеличенная) -->
+            <img class="mbti-overlay" src="elements/MBTI.png" alt="MBTI">
+            <strong>Перетекающие линии</strong>
+            <span>Основной паттерн «поток»</span>
+        </div>
+
+        <!-- Зелёный блок с циклической сменой паттерна типов -->
+        <div class="color-hover" id="patternCycler">
+            <div class="overlay-block">
+                <img class="bg-img" src="elements/greenelement.png" alt="Зелёный элемент">
+                <img class="pattern-img" id="patternImg" src="elements/INFP.png" alt="Паттерн типа личности">
+            </div>
+            <strong>Паттерн с типом личности</strong>
+            <span>При наведении циклически меняется тип личности</span>
+        </div>
+
+        <div>
+            <img src="elements/colour.png" alt="Разноцветный фон">
+            <strong>Разноцветный фон</strong>
+            <span>Используется для фона на цифровых и печатных носителях</span>
+        </div>
+        <div>
+            <img src="elements/circle.png" alt="Разноцветные пятна">
+            <strong>Разноцветные пятна</strong>
+            <span>Используются для купона</span>
+        </div>
+    </div>
+    
+    <h2>Фотостиль</h2>
+    <div class="photostyle-grid">
+        <div class="photo-item"><img src="elements/photo1.png" alt="Фото 1"><p>Уютная атмосфера</p></div>
+        <div class="photo-item"><img src="elements/photo2.png" alt="Фото 2"><p>Напитки по типам</p></div>
+        <div class="photo-item"><img src="elements/photo3.png" alt="Фото 3"><p>Детали интерьера</p></div>
+        <div class="photo-item"><img src="elements/photo4.png" alt="Фото 4"><p>Гости за дегустацией</p></div>
+        <div class="text-block-card"><p>Фотостиль бренда: естественное освещение, тёплая тональность, акцент на деталях – текстура кофейной пенки, капли на стакане, рука, держащая чашку.</p></div>
+        <div class="photo-item"><img src="elements/photo5.png" alt="Фото 5"><p>Фирменная упаковка</p></div>
+    </div>
+    
+    <div class="footer-social">
+        <a href="https://vk.com/tunubkyc">ВКонтакте</a>
+">ВКонтакте</a>
+    </div>
+</div>
+
+<script>
+    // --- Циклическая смена цветов для голубого блока (интервал 600 мс) ---
+    // Добавлен новый цвет "калер" (замените на реальное имя файла, например "elements/caler.png")
+    const colorImages = [
+        "elements/blueelement.png",
+        "elements/greenelement.png",
+        "elements/purpleelement.png",
+        "elements/yellowelement.png",
+        "elements/colour.png"   // новый цвет – проверьте имя файла и наличие в папке elements/
+    ];
+    let colorIndex = 0;
+    let colorInterval = null;
+    const cyclerImg = document.getElementById("cyclerImg");
+    const cyclerDiv = document.getElementById("colorCycler");
+
+    function startColorCycle() {
+        if (colorInterval) clearInterval(colorInterval);
+        colorInterval = setInterval(() => {
+            colorIndex = (colorIndex + 1) % colorImages.length;
+            cyclerImg.src = colorImages[colorIndex];
+        }, 600);
+    }
+
+    function stopColorCycle() {
+        if (colorInterval) {
+            clearInterval(colorInterval);
+            colorInterval = null;
+        }
+        cyclerImg.src = colorImages[0];
+        colorIndex = 0;
+    }
+
+    cyclerDiv.addEventListener("mouseenter", startColorCycle);
+    cyclerDiv.addEventListener("mouseleave", stopColorCycle);
+
+    // --- Циклическая смена паттернов 16 типов для зелёного блока (интервал 600 мс) ---
+    const typeList = [
+        "INTJ", "INTP", "ENTJ", "ENTP",
+        "INFJ", "INFP", "ENFJ", "ENFP",
+        "ISTJ", "ISFJ", "ESTJ", "ESFJ",
+        "ISTP", "ISFP", "ESTP", "ESFP"
+    ];
+    let patternIndex = 0;
+    let patternInterval = null;
+    const patternImg = document.getElementById("patternImg");
+    const patternDiv = document.getElementById("patternCycler");
+
+    function startPatternCycle() {
+        if (patternInterval) clearInterval(patternInterval);
+        patternInterval = setInterval(() => {
+            patternIndex = (patternIndex + 1) % typeList.length;
+            patternImg.src = "elements/" + typeList[patternIndex] + ".png";
+        }, 600);
+    }
+
+    function stopPatternCycle() {
+        if (patternInterval) {
+            clearInterval(patternInterval);
+            patternInterval = null;
+        }
+        patternImg.src = "elements/INFP.png";
+        patternIndex = 0;
+    }
+
+    patternDiv.addEventListener("mouseenter", startPatternCycle);
+    patternDiv.addEventListener("mouseleave", stopPatternCycle);
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Шрифты | Гайдлайн</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .font-card {
+            display: grid;
+            grid-template-columns: 9fr 3fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: center;
+            border: 2px solid #000;
+            border-radius: 30px;
+            padding: 30px;
+        }
+        .font-sample img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: none;
+            border-radius: 0;
+        }
+        .font-description {
+            text-align: left;
+        }
+        @media (max-width: 768px) {
+            .font-card {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-menu">
+        <a href="index.html">Главная</a>
+        <a href="logo.html">Логотипы</a>
+        <a href="palette.html">Палитра</a>
+        <a href="fonts.html">Шрифты</a>
+        <a href="elements.html">Фирменный стиль</a>
+        <a href="mascot.html">Маскоты</a>
+        <a href="media.html">Носители</a>
+        <a href="social.html">Соцсети</a>
+    </div>
+
+    <a href="index.html" class="back">← На главную</a>
+    <h1>Типографика</h1>
+    
+    <div class="font-card">
+        <div class="font-sample">
+            <img src="fonts/fredoka_sample.png" alt="Образец шрифта Fredoka One">
+        </div>
+        <div class="font-description">
+            <h2 style="font-family:'Fredoka One'; margin:0 0 10px 0;">Fredoka One</h2>
+            <p><strong>Акцентный шрифт</strong><br>Используется для заголовков на внешних и внутренних носителях.</p>
+        </div>
+    </div>
+    
+    <div class="font-card">
+        <div class="font-sample">
+            <img src="fonts/century_gothic_sample.png" alt="Образец шрифта Century Gothic Regular">
+        </div>
+        <div class="font-description">
+            <h2 style="margin:0 0 10px 0;">Century Gothic Regular</h2>
+            <p><strong>Основной шрифт</strong><br>Стандартный шрифт для основного текста во внутренних и внешних носителях.</p>
+        </div>
+    </div>
+    
+    <div class="font-card">
+        <div class="font-sample">
+            <img src="fonts/century_gothic_bold_sample.png" alt="Образец шрифта Century Gothic Bold">
+        </div>
+        <div class="font-description">
+            <h2 style="margin:0 0 10px 0;">Century Gothic Bold</h2>
+            <p><strong>Дополнительный шрифт</strong><br>Используется для подзаголовков во внутренних и внешних носителях.</p>
+        </div>
+    </div>
+    
+    <div class="footer-social">
+        <a href="https://vk.com/tunubkyc">ВКонтакте</a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Логотипы | Гайдлайн</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .forbidden-card {
+            position: relative;
+            grid-column: span 3;
+        }
+        .forbidden-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: auto;
+            height: auto;
+            max-width: 60px;
+            z-index: 2;
+            pointer-events: none;
+            border: none !important;
+            border-radius: 0 !important;
+        }
+        .forbidden-img {
+            width: 100%;
+            display: block;
+            border: 2px solid #000;
+            border-radius: 30px;
+        }
+        .forbidden-card p {
+            margin-top: 16px;
+            text-align: center;
+        }
+        .two-text-blocks {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        /* увеличенный текст для охранных полей */
+        .security-text {
+            line-height: 1.5;
+        }
+        .security-text strong {
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-menu">
+        <a href="index.html">Главная</a>
+        <a href="logo.html">Логотипы</a>
+        <a href="palette.html">Палитра</a>
+        <a href="fonts.html">Шрифты</a>
+        <a href="elements.html">Фирменный стиль</a>
+        <a href="mascot.html">Маскоты</a>
+        <a href="media.html">Носители</a>
+        <a href="social.html">Соцсети</a>
+    </div>
+
+    <a href="index.html" class="back">← На главную</a>
+
+    <div class="grid-12">
+        <div class="text-block-6">
+            <h1 style="margin-top: 0;">Логотипы</h1>
+            <div class="two-text-blocks">
+                <div>
+                    <p><strong>Основной логотип</strong> — графическая кружка с перетекающими линиями, символизирует потоки личности и мягкость переходов между психотипами.</p>
+                </div>
+                <div>
+                    <p><strong>Шрифтовой логотип</strong> «Тип&Вкус» (Fredoka One) применяется в соцсетях, на картах лояльности и в цифровых носителях.</p>
+                    <p>Варианты: совместное использование графического и шрифтового знака, а также изолированное — только шрифт или только чашка с линиями.</p>
+                </div>
+            </div>
+        </div>
+        <div style="grid-column: span 6;">
+            <div class="grid-3">
+                <img src="logo/logo1.png" alt="logo1"><img src="logo/logo2.png" alt="logo2"><img src="logo/logo3.png" alt="logo3">
+                <img src="logo/logo4.png" alt="logo4"><img src="logo/logo5.png" alt="logo5"><img src="logo/logo6.png" alt="logo6">
+                <img src="logo/logo7.png" alt="logo7"><img src="logo/logo8.png" alt="logo8"><img src="logo/logo9.png" alt="logo9">
+            </div>
+        </div>
+    </div>
+
+    <h2>Охранные поля</h2>
+    <div class="grid-12">
+        <div style="grid-column: span 4;"><img src="logo/logoclear1.png" alt="схема отступов" class="no-frame"></div>
+        <div style="grid-column: span 4;" class="text-card security-text">
+            <strong>Минимальные отступы</strong><br>
+            За размер минимального отступа была взята буква «с» из шрифтовой части логотипа «Тип&Вкус». Это расстояние является базовым охранным полем для всех носителей. Логотип и ключевые элементы не должны заходить в эту зону. 
+        </div>
+        <div style="grid-column: span 4;"><img src="logo/logoclear2.png" alt="пример на визитке" class="no-frame"></div>
+    </div>
+
+    <h2>Запрещённые модификации</h2>
+    <div class="grid-12">
+        <div class="forbidden-card">
+            <img class="forbidden-img" src="logo/logoban1.png" alt="расположение">
+            <p>Расположение графического элемента и шрифтовой части</p>
+        </div>
+        <div class="forbidden-card">
+            <img class="forbidden-img" src="logo/logoban2.png" alt="цвет">
+            <p>Изменение цвета графического логотипа</p>
+        </div>
+        <div class="forbidden-card">
+            <img class="forbidden-img" src="logo/logoban3.png" alt="тени">
+            <p>Шрифтовой логотип без подстрочника</p>
+        </div>
+        <div class="forbidden-card">
+            <img class="forbidden-img" src="logo/logoban4.png" alt="наклон">
+            <p>Использование логотипа с графическим элементом без подложки</p>
+        </div>
+    </div>
+
+    <div class="footer-social">
+        <a href="https://vk.com/tunubkyc">ВКонтакте</a>
+    </div>
+</div>
+</body>
+</html>
