@@ -39,6 +39,8 @@
             display: inline-block;
             font-weight: 700;
             letter-spacing: 1px;
+            background: rgba(0, 0, 0, 0.4); /* добавлен полупрозрачный фон для читаемости */
+            backdrop-filter: blur(2px);
         }
         /* Сетка для двух рядов */
         .menu-wrapper {
@@ -102,6 +104,8 @@
         }
         body { margin: 0; padding: 0; }
         .container { margin-top: 0; }
+
+        /* Планшеты */
         @media (max-width: 1100px) {
             .menu-item {
                 width: 200px;
@@ -114,10 +118,23 @@
                 gap: 40px;
             }
         }
+
+        /* Мобильная версия (основная) */
         @media (max-width: 768px) {
-            .full-width-banner { height: 250px; }
-            .banner-title h1 { font-size: 32px; padding: 6px 16px; }
-            .banner-title { top: 15px; left: 15px; }
+            .full-width-banner {
+                height: 250px;
+            }
+            .banner-title {
+                top: 15px;
+                left: 15px;
+            }
+            .banner-title h1 {
+                font-size: 28px;        /* уменьшили с 32px до 28px */
+                padding: 4px 14px;      /* уменьшили внутренние отступы */
+                letter-spacing: 0.5px;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(2px);
+            }
             .menu-item {
                 width: 150px;
                 height: 150px;
@@ -128,6 +145,28 @@
             .menu-row {
                 gap: 20px;
                 margin-bottom: 30px;
+            }
+        }
+
+        /* Очень маленькие экраны (до 480px) */
+        @media (max-width: 480px) {
+            .full-width-banner {
+                height: 200px;
+            }
+            .banner-title h1 {
+                font-size: 22px;
+                padding: 4px 12px;
+                letter-spacing: 0.3px;
+            }
+            .menu-item {
+                width: 120px;
+                height: 120px;
+            }
+            .menu-item span {
+                font-size: 14px;
+            }
+            .menu-row {
+                gap: 15px;
             }
         }
     </style>
